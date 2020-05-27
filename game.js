@@ -183,7 +183,19 @@ window.addEventListener('keydown', function (e) {
         accelerate(-0.5);
     }
 })
+window.addEventListener('ontouchstart', function (e) {
+    if (e.keyCode == 65){
+        accelerate(-0.5);
+    }
+})
 window.addEventListener('keyup', function (e) {
+    if (e.keyCode == 65){
+        accelerate(0.2);
+    } else if (e.keyCode == 82){
+        restartgame();
+    }
+})
+window.addEventListener('ontouchend', function (e) {
     if (e.keyCode == 65){
         accelerate(0.2);
     } else if (e.keyCode == 82){
